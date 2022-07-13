@@ -1,10 +1,38 @@
 <!DOCTYPE html>
 <html>
-<body>
+<body style = background-color:powderblue;>
 
-<h1>My First Heading</h1>
+<head>
+  <style>
+    .introText {
+      color: black;
+    }
+  
+    /* add other classes with colors and stuff here */
 
-<p>My first paragraph.</p>
+  </style>
+</head>
+<body onload="typeWriter()">
+  <h1>
+
+    <div id="demo" class="introText" >
+      
+    </div>
+  </h1>
+
+  <script>
+    var i = 0;
+    var txt ='My name is Jonathan Bacon, welcome to my website!';
+    var speed = 50;
+    function typeWriter() {
+      if (i < txt.length) {
+        document.getElementById("demo").innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+    
+    </script>
 
 </body>
 </html>
