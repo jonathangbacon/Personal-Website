@@ -1,2 +1,2 @@
 # Personal-Website
-my personal website
+Jonathan Bacon's Personal Website
