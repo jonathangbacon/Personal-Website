@@ -1,21 +1,93 @@
+
 <!DOCTYPE html>
 <html>
-<body style = background-color:powderblue;>
 
-<head>
-  <style>
-    .introText {
-      color: black;
-    }
+  <head>
+    <style>
+      html {
+  height:100%;
+}
+
+body {
+  margin:0;
+}
+
+.bg {
+  animation:slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:4s;
+}
+
+.bg3 {
+  animation-duration:5s;
+}
+
+.content {
+  background-color:rgba(255,255,255,.8);
+  border-radius:.25em;
+  box-shadow:0 0 .25em rgba(0,0,0,.25);
+  box-sizing:border-box;
+  left:50%;
+  padding:10vmin;
+  position:fixed;
+  text-align:center;
+  top:50%;
+  transform:translate(-50%, -50%);
+}
+
+h1 {
+  font-family:monospace;
+}
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
+      
+      .introText {
+        color: black;
+        font-size: 30px;
+      }
+      .backgroundColor {
+        background: linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);
   
-    /* add other classes with colors and stuff here */
+      }
+    
+      /* add other classes with colors and stuff here */
+  
+    </style>
+  </head>
 
-  </style>
-</head>
+<!-- edit background colors and stuff here -->
+<body style = background-color:powderblue;
+  <div class = "backgroundColor" >  </div>
+  <div class = "bg" > </div>
+  <div class = "bg2" > </div>
+  <div class = "bg3" > </div>
+  <div class = "h1" > </div>
+</body>
+
+
 <body onload="typeWriter()">
   <h1>
-
+    
     <div id="demo" class="introText" >
+      
       
     </div>
   </h1>
@@ -30,9 +102,12 @@
         i++;
         setTimeout(typeWriter, speed);
       }
+      
     }
     
     </script>
+
+
 
 </body>
 </html>
